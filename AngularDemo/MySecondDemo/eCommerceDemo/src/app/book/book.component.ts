@@ -21,4 +21,8 @@ export class BookComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  handleClick() {
+    this.isSubmitted = true;
+    alert("I am working!");
+  }
 }
