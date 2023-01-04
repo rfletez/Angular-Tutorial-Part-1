@@ -25,4 +25,14 @@ export class BookComponent implements OnInit {
     this.isSubmitted = true;
     alert("I am working!");
   }
+
+  myName: string = "Karthik";
+  handleInput(event: any) {
+    let name = event.target.name;
+    let value = event.target.value;
+
+    this.myName = value;
+    
+    console.log("Name: " + name + ", Value: " + value);
+  }
 }
