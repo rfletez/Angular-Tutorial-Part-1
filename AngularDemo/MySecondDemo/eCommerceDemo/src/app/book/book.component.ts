@@ -14,6 +14,8 @@ export class BookComponent implements OnInit {
   author2: string = "Alex Wu";
   src2: string = "https://m.media-amazon.com/images/I/312L17hmrOL._SY291_BO1,204,203,200_QL40_FMwebp_.jpg";
 
+  isSubmitted: boolean = false;
+
   constructor() { }
 
   ngOnInit(): void {
