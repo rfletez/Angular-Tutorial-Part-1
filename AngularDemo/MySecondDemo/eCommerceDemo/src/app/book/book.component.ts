@@ -4,6 +4,7 @@ interface Book {
   name: string;
   author: string;
   src: string;
+  amount: number;
 }
 
 @Component({
@@ -14,14 +15,16 @@ interface Book {
 export class BookComponent implements OnInit {
   books: Book[] = [
     {
-      name: "Clean Code",
-      author: "Rober C. Martin",
-      src: "https://m.media-amazon.com/images/I/41xShlnTZTL._SX376_BO1,204,203,200_.jpg"
+      name: "clean code",
+      author: "robert c. cartin",
+      src: "https://m.media-amazon.com/images/I/41xShlnTZTL._SX376_BO1,204,203,200_.jpg",
+      amount: 500
     },
     {
       name: "System Design Interview - An Insider's Guide",
       author: "Alex Wu",
-      src: "https://m.media-amazon.com/images/I/312L17hmrOL._SY291_BO1,204,203,200_QL40_FMwebp_.jpg"
+      src: "https://m.media-amazon.com/images/I/312L17hmrOL._SY291_BO1,204,203,200_QL40_FMwebp_.jpg",
+      amount: 450
     }
   ];
 
