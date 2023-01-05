@@ -16,6 +16,8 @@ export class BookComponent implements OnInit {
 
   isSubmitted: boolean = false;
 
+  isDisplayed: boolean = true;
+
   constructor() { }
 
   ngOnInit(): void {
@@ -34,5 +36,12 @@ export class BookComponent implements OnInit {
     this.myName = value;
     
     console.log("Name: " + name + ", Value: " + value);
+  }
+
+  displayBooks() {
+    //if isDisplayed is true, then make it false.
+    //if isDisplayed is false, then make it true.
+
+    this.isDisplayed = !this.isDisplayed;
   }
 }
