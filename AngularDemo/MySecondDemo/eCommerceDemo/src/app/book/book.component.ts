@@ -19,6 +19,24 @@ export class BookComponent implements OnInit {
       author: "Alex Wu",
       src: "https://m.media-amazon.com/images/I/312L17hmrOL._SY291_BO1,204,203,200_QL40_FMwebp_.jpg",
       amount: 450
+    },
+    {
+      name: "The Lord of the Rings",
+      author: "JRR Tolkien",
+      src: "https://m.media-amazon.com/images/I/41fx2jOQMfL._SX218_BO1,204,203,200_QL40_FMwebp_.jpg",
+      amount: 1000
+    },
+    {
+      name: "The Illiad",
+      author: "Homer",
+      src: "https://m.media-amazon.com/images/I/51bMPbMWfOL._SX218_BO1,204,203,200_QL40_FMwebp_.jpg",
+      amount: 650
+    }, 
+    {
+      name: "Thomas H. Cormen",
+      author: "Intro to Algorithms",
+      src: "https://m.media-amazon.com/images/I/41vLer1KbmL._SX218_BO1,204,203,200_QL40_FMwebp_.jpg",
+      amount: 335
     }
   ];
 
@@ -26,6 +44,7 @@ export class BookComponent implements OnInit {
 
   isDisplayed: boolean = true;
 
+  cart: Book[] = [];
 
   constructor() { }
 
