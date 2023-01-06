@@ -1,18 +1,9 @@
 <h2>List of Books</h2>
 
-<button (click)="displayBooks()">
-    <ng-container *ngIf="!isDisplayed">Show Books</ng-container>
-    <ng-container *ngIf="isDisplayed">Hide Books</ng-container>
-</button>
-
 <ul *ngIf="isDisplayed">
     <ng-container *ngFor="let book of books; let i = index">
-        <li class="book">
-            <p class="sno">{{ i+1 }}</p>
-            <img [src]="book.src" [alt]="book.name" width="100px" />
-            <p class="title">{{ book.name | titlecase }} by {{ book.author | titlecase }}</p>
-            <p class="currency">{{ book.amount | currency:'USD' }}</p>
-        </li>
+        <app-single-book [single_book]="book"></app-single-book>
+        <!--Parent to Child component-->
     </ng-container>
 </ul>
 
