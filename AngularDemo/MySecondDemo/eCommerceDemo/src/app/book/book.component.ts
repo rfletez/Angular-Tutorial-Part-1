@@ -72,4 +72,8 @@ export class BookComponent implements OnInit {
 
     this.isDisplayed = !this.isDisplayed;
   }
+
+  addToCart(event: Book) {
+    console.log(event);
+  }
 }

@@ -2,7 +2,7 @@
 
 <ul *ngIf="isDisplayed">
     <ng-container *ngFor="let book of books; let i = index">
-        <app-single-book [single_book]="book"></app-single-book>
+        <app-single-book (emitBook)="addToCart($event)" [single_book]="book"></app-single-book>
         <!--Parent to Child component-->
     </ng-container>
 </ul>
