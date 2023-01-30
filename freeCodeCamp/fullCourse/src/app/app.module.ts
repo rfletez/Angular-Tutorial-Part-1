@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { RecordsService } from './text/records.service';
 import { TextComponent } from './text/text.component';
 
 @NgModule({
@@ -14,7 +15,7 @@ import { TextComponent } from './text/text.component';
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [RecordsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
