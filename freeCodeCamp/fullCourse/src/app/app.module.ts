@@ -7,17 +7,20 @@ import { AppComponent } from './app.component';
 import { RecordsService } from './text/records.service';
 import { TextComponent } from './text/text.component';
 import { FormComponentComponent } from './form-component/form-component.component';
+import { NavbarComponent } from './navbar/navbar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TextComponent,
-    FormComponentComponent
+    FormComponentComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    AppRoutingModule
   ],
   providers: [RecordsService],
   bootstrap: [AppComponent]
