@@ -51,3 +51,35 @@
         <button class="btn btn-primary" type="submit">Submit</button>
     </form>
 </div>
+
+<div class="container">
+    <h2>Employee List Service</h2>
+
+    <form #enterInput="ngForm" (ngSubmit)="updateInfo(enterInput)">
+        <div class="">
+            <input type="text" name="location" value="" ngModel />
+            <button type="button" name="button">Add Info</button>
+        </div>
+    </form>
+
+    <button type="button" name="button" (click)="getInfoFromService1()">Employee 1</button>
+    <ul class="list-group">
+        <li *ngFor="let info of infoReceived1" class="list-group-info">
+            {{ info }}
+        </li>
+    </ul>
+
+    <button type="button" name="button" (click)="getInfoFromService2()">Employee 2</button>
+    <ul class="list-group">
+        <li *ngFor="let info of infoReceived2" class="list-group-info">
+            {{ info }}
+        </li>
+    </ul>
+
+    <button type="button" name="button" (click)="getInfoFromService3()">Employee 3</button>
+    <ul class="list-group">
+        <li *ngFor="let info of infoReceived3" class="list-group-info">
+            {{ info }}
+        </li>
+    </ul>
+</div>
