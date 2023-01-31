@@ -5,7 +5,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { TextComponent } from './text/text.component';
 
 const routes: Routes = [
-  { path: '/', component: NavbarComponent },
+  { path: '/', pathMatch: 'full', component: NavbarComponent },
   { path: 'text', component: TextComponent },
   { path: 'form', component: FormComponentComponent }
 ];

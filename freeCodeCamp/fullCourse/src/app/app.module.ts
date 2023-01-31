@@ -8,13 +8,15 @@ import { RecordsService } from './text/records.service';
 import { TextComponent } from './text/text.component';
 import { FormComponentComponent } from './form-component/form-component.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import { ReactiveComponent } from './reactive/reactive.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TextComponent,
     FormComponentComponent,
-    NavbarComponent
+    NavbarComponent,
+    ReactiveComponent
   ],
   imports: [
     BrowserModule,
