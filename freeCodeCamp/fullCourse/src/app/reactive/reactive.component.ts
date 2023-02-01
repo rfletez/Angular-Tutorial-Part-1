@@ -14,9 +14,9 @@ export class ReactiveComponent implements OnInit {
   ngOnInit() {
     this.reactiveForm = new FormGroup({
       personalDetails: new FormGroup({
-        fname: new FormControl(null, Validators.required),
-        lname: new FormControl(null, Validators.required),
-        email: new FormControl(null, [Validators.required, Validators.email])
+        fname: new FormControl(null, [Validators.required, this.noSpaceAllowed]),
+        lname: new FormControl(null, [Validators.required, this.noSpaceAllowed]),
+        email: new FormControl(null, [Validators.required, Validators.email, this.noSpaceAllowed])
       }),
 
       gender: new FormControl("male"),
@@ -36,5 +36,15 @@ export class ReactiveComponent implements OnInit {
     (<FormArray>this.reactiveForm.get('skills')).push(new FormControl(null, [Validators.required]));
     //Before the push(), inside the parentheses it is typecasted to FormArray
     //in order to use the push().
+  }
+
+  noSpaceAllowed(control: FormControl) {
+    if(control.value !== null && control.value.indexOf(' ') !== -1) {
+      return {
+        noSpaceAllowed: true
+      };
+    }
+
+    return null;
   }
 }

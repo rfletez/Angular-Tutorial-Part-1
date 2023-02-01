@@ -4,6 +4,14 @@
         <div formGroupName="personalDetails">
             <label for="fname">First Name</label>
             <input type="text" id="fname" placeholder="Enter your first name..." formControlName="fname"/>
+            <div>
+                <small *ngIf="reactiveForm.get('personalDetails.fname').errors?.['required']">
+                    First name is a required field.
+                </small>
+                <small *ngIf="reactiveForm.get('personalDetails.fname').errors?.['noSpaceAllowed']">
+                    First name cannot have a space.
+                </small>
+            </div>
 
             <label for="lname">Last Name</label>
             <input type="text" id="lname" placeholder="Enter your last name..." formControlName="lname"/>
